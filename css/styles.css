@@ -1,0 +1,97 @@
+#mainHeading {
+    background-color: blueviolet;
+    border: solid 10px green;
+    margin: 20px;
+    padding: 15px;
+    border: blue solid 10px;
+}
+body {
+    margin: 5%;
+}
+ul {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap:wrap ;
+    flex-direction: row-reverse;
+}
+ul li{
+    list-style: none;
+    width: 200px;
+    height: 200px;
+    background-color: aliceblue;
+}
+/*child seletor*/
+aside>p{
+    border: 3px solid coral;
+}
+/*adjacent selector*/
+aside + p{
+    font-weight: 900;
+    font-size: 5ch;
+    width:600px ;
+    color:transparent ;
+    background-image:url(https://matthew-dean-brown.github.io/hostedImages/images/cat2.avif);
+    background-size: cover;
+    background-clip: text;
+}
+/*general sibling selector*/
+p~table    /*do not use empty rulesets*/
+        {
+         border: 1ch beige solid;
+        }
+div p{
+    background-color: brown;
+    color: whitesmoke;
+    font-size: 50px;
+    width:300px ;
+    height:300px ;
+    align-content:center ;
+    border-radius:10%; ;
+    transition: 0.5s;
+}
+div p:hover{
+    transform: rotateX(360deg);
+    border-radius: 50%;
+    transition:transform 1s;
+}
+img {
+    width:300px ;
+    height:300px ;
+    border-radius:10% ;
+    object-fit:cover;
+}
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.front,.back{
+    width: 300px;
+    height: 300px;
+    box-shadow: 10px 10px 4px 2px rgb(120, 250, 120);
+    border-radius: 2en;
+    position: absolute;
+    color: white;
+    backface-visibility:hidden;
+}
+.card{
+    position: relative;
+    transition:transform 1s;
+    width: 300px;
+    height: 300px;
+    transform-style: preserve-3d;
+}
+.card:hover{
+    transform:rotateY(180deg);
+    cursor:pointer;
+    width:300px ;
+    height:300px;
+}
+.container article:hover > .card{
+    transform:rotateY(180deg); transform:rotateZ(180deg);
+    cursor: pointer;
+}
+.back{
+    transform:rotateY(180deg);
+    background-color: black;
+}
+
